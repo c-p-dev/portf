@@ -5,6 +5,7 @@
     <Aboutme/>
     <Experience/>
     <!--  <Projects/>
+    asd
     <ContactMe/> -->
   </div>
 </template>
