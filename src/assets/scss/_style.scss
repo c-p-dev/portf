@@ -1,0 +1,83 @@
+$bg: #0A0C10;
+$orange:#F88600;
+$gray:#CCCCCC;
+$white: #ffff;
+$highlight:#463535;
+
+*, *::before, *::after { box-sizing: border-box;}
+body {
+    background: $bg;
+    color: $gray;
+    margin: 0px;
+    font-size: 18px;
+}
+
+.container{ 
+    height: 100vh;
+    section {
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+    }
+}
+
+.title-header {
+    width: 100%;
+    text-align: center;
+  
+}
+
+.secondary-font {
+    font-family: "Quicksand";
+    font-size: 1em;
+}
+
+.primary-font{
+    font-family: "PatuaOne";
+    font-size: 1.3em;
+}
+
+.list-font{
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console",
+}
+
+.content{
+    padding-top: 60px;
+}
+
+.t-center{
+    text-align: center;
+}
+
+.content-page{
+    max-width: 1000px;
+    position: relative;
+    margin: 0px auto;
+    padding: 150px 0px;
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+    
+a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+.check-list{
+    padding: 0px;
+    li{
+        list-style: none;
+        padding: 5px 0px;
+        &::before {
+            content: "✅";
+            margin-right: 10px;
+            left: 0px;
+            color: $orange;
+            font-size: 0.6em;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "chrisp-6db4b"
+  },
+  "hosting": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
