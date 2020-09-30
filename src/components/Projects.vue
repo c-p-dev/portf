@@ -1,17 +1,22 @@
 <template>
-    <div class="container column-template" id="projects">
+    <div class="container">
+        <section
+            id="projects"
+            class="content content-page animate__animated animate__fadeInUp animate__delay-1s"
+        >
         <Vtitle title="Projects" />
-        <p>These are live projects that I was involve with. I do not own them.</p>
-        <div class="project-list">
-            <div v-for="item in projects" :key="item.projectName" class="proj-item">
-                <a v-bind:href="item.projectUrl" target="_blank">
-                    <div class="pro-img">
-                        <img v-bind:src="require('../assets/projects/' + item.projectImage)" alt />
-                    </div>
-                    <div class="pro-desc">{{item.projectName}}</div>
-                </a>
+            <p class="t-center secondary-font">These are live projects that I was involve with. I do not own them.</p>
+            <div class="project-list">
+                <div v-for="item in projects" :key="item.projectName" class="proj-item">
+                    <a v-bind:href="item.projectUrl" target="_blank">
+                        <div class="pro-img">
+                            <img v-bind:src="require('../assets/projects/' + item.projectImage)" alt />
+                        </div>
+                        <div class="pro-desc">{{item.projectName}}</div>
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
 </template>
 
@@ -67,6 +72,7 @@ export default {
         };
     }
 };
+import "animate.css";
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
@@ -87,7 +93,6 @@ $gray: #cccccc;
 }
 .title-header {
     grid-column: 2;
-    width: 180px;
     margin: 0 auto;
     text-align: center;
 }
@@ -95,6 +100,7 @@ $gray: #cccccc;
 .project-list {
     grid-column: 2;
     text-align: center;
+    margin: 20px;
     .proj-item {
         margin: 30px 20px;
         align-items: center;
@@ -102,14 +108,20 @@ $gray: #cccccc;
         text-decoration: none;
 
         &:hover{
-            transform: scale(1.2);
+          
+            transform: scale(1.4);
             -webkit-transition: transform .08s ease-in-out;
             -moz-transition:transform .08s ease-in-out;
             -ms-transition:transform .08s ease-in-out;
+            img{
+                filter: grayscale(0%)!important;
+                transition:filter 0.3s ease-in-out;
+            }
         }
         .pro-img {
             img {
                 max-width: 280px;
+                filter: grayscale(100%);
             }
         }
         .pro-desc{

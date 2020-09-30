@@ -112,7 +112,7 @@ export default {
 .main-buttons {
 
     margin-top: 30px;
-    button {
+    button, a {
         background: transparent;
         border: none;
         color: $gray;

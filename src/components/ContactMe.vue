@@ -1,9 +1,12 @@
 <template>
-    <section>
-        <div class="container column-template" id="contact-me">
+    <div class="container">
+        <section
+            id="contact-me"
+            class="content content-page animate__animated animate__fadeInUp animate__delay-1s"
+        >
             <Vtitle title="Contact Me" />
-            <div class="contact-me-details">
-                <div class="by-email">
+            <div class="contact-me-details secondary-font t-center">
+                <!-- <div class="by-email">
                     <h4>Send me an Email</h4>
                     <h3 class="email">chris.patuasic@gmail.com</h3>
                 </div>
@@ -12,75 +15,40 @@
                     <button id="resume-btn">
                         <span>View Resume</span>
                     </button>
-                </div>
-                <div class="platforms">
-                    <h4>Check me out at these platforms</h4>
-                    <div class="platforms">
-                        <ul id="template-icons">
-                            <li>
-                                <a
-                                    href="https://www.linkedin.com/in/chris-patuasic-85b403158/"
-                                    target="_blank"
-                                >
-                                    <IconifyIcon
-                                        :icon="icons.linkedinFilled"
-                                        :style="{ color: '#ffffff', fontSize: '30px;' }"
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.facebook.com/chrisyaneh" target="_blank">
-                                    <IconifyIcon
-                                        :icon="icons.facebookFilled"
-                                        :style="{ color: '#ffffff', fontSize: '30px;' }"
-                                    />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/c-p-dev" target="_blank">
-                                    <IconifyIcon
-                                        :icon="icons.githubFilled"
-                                        :style="{ color: '#ffffff', fontSize: '30px;' }"
-                                    />
-                                </a>
-                            </li>
-                            <!-- <li>
-                            <a href="https://www.facebook.com/chrisyaneh" target="_blank">
-                                <IconifyIcon
-                                    :icon="icons.gmailIcon"
-                                    :style="{ color: '#ffffff', fontSize: '30px;' }"
-                                />
-                            </a>
-                            </li>-->
-                        </ul>
-                    </div>
-                </div>
+                </div> -->
+
+                <p>
+                    Shoot me an message here.  Will gladly try to message you back right away.
+                </p>
+            
+                <a class="main-buttons" href="mailto:chris.patuasic@gmail.com">Email me</a>
+                
             </div>
-        </div>
-    </section>
+        </section>
+     </div>
 </template>
 
 <script>
 import Vtitle from "./shared/Vtitle.vue";
-import IconifyIcon from "@iconify/vue";
-import linkedinFilled from "@iconify/icons-ant-design/linkedin-filled";
-import facebookFilled from "@iconify/icons-ant-design/facebook-filled";
-import githubFilled from "@iconify/icons-ant-design/github-filled";
-import gmailIcon from "@iconify/icons-mdi/gmail";
+// import IconifyIcon from "@iconify/vue";
+// import linkedinFilled from "@iconify/icons-ant-design/linkedin-filled";
+// import facebookFilled from "@iconify/icons-ant-design/facebook-filled";
+// import githubFilled from "@iconify/icons-ant-design/github-filled";
+// import gmailIcon from "@iconify/icons-mdi/gmail";
 
 export default {
     name: "ContactMe",
     components: {
         Vtitle,
-        IconifyIcon
+        // IconifyIcon
     },
     data() {
         return {
             icons: {
-                linkedinFilled,
-                facebookFilled,
-                githubFilled,
-                gmailIcon
+                // linkedinFilled,
+                // facebookFilled,
+                // githubFilled,
+                // gmailIcon
             }
         };
     }
@@ -99,7 +67,6 @@ $gray: #cccccc;
 }
 .title-header {
     grid-column: 2;
-    width: 180px;
     margin: 0 auto;
     text-align: center;
 }
@@ -134,12 +101,31 @@ $gray: #cccccc;
     }
 }
 
-button {
+.main-buttons {
+
+    margin-top: 30px;
     background: transparent;
     border: none;
     color: $gray;
     font-family: "Open Sans";
-    font-size: 16px;
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid $white;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    &:hover, .active{
+        background: $orange;
+        color: $white;
+        border: 2px solid $white;
+        border-radius: 15px;
+        transition: background 0.5s ease;
+    }
+    
+
+
+
 }
 
 @media only screen and (min-width: 900px) {

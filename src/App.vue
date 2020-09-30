@@ -4,9 +4,9 @@
     <Homepage/>
     <Aboutme/>
     <Experience/>
-    <!--  <Projects/>
-    asd
-    <ContactMe/> -->
+    <Projects/>
+
+    <ContactMe/>
   </div>
 </template>
 <script>
@@ -14,8 +14,8 @@ import Header from "./components/Header.vue";
 import Homepage from "./components/Hompage.vue";
 import Aboutme from "./components/Aboutme.vue"; 
 import Experience from "./components/Experience.vue";
-// import Projects from "./components/Projects.vue";
-// import ContactMe from "./components/ContactMe.vue"
+import Projects from "./components/Projects.vue";
+import ContactMe from "./components/ContactMe.vue"
 export default {
   name: "App",
   components: {
@@ -23,8 +23,8 @@ export default {
     Homepage,
     Aboutme,
     Experience,
-    // Projects,
-    // ContactMe
+    Projects,
+    ContactMe
   },
   
 };
